@@ -8,15 +8,14 @@ export class MysqlRepository implements Repository {
     try {
       const [dat]: any = await query(sql, []);
       const datas = Object.values(JSON.parse(JSON.stringify(dat)));
-      console.log(datas)
       return datas.map(
         (data: any) =>
           new Modelo(
             data.id,
-            data.name,
-            data.cantidad,
-            data.tiempo,
-            data.id_expe
+            data.nombre,
+            data.fecha_inicio,
+            data.fecha_fin,
+            data.estatus
           )
       );
     } catch (error) {
