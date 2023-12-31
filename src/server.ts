@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/cliente", clientRouter);
 app.use("/cita", citaRouter);
-app.use("/candelario", candeRouter);
+app.use("/calendario", candeRouter);
 app.use("/admin", adminRouter);
 app.use("/material", matRouters);
 
