@@ -4,7 +4,7 @@ import { Repository } from "../domain/Repository";
 
 export class MysqlRepository implements Repository{
     async getById(id: number): Promise<Modelo | null> {
-        const sql = "SELECT * FROM materiales WHERE id=?";
+        const sql = "SELECT * FROM materiales WHERE id_cliente=?";
         const params = [id]
         try {
             const result: any = await query(sql, params);
