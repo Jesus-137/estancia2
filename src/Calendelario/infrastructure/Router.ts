@@ -5,7 +5,7 @@ import { getAllController } from "./dependencies";
 
 export const candeRouter = express.Router();
 
-candeRouter.post(
+candeRouter.get(
   "/getAll/",
   getAllController.run.bind(getAllController)
 );
